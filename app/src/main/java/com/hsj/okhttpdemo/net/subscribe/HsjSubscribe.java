@@ -19,7 +19,7 @@ import okhttp3.ResponseBody;
  */
 public class HsjSubscribe {
     /**
-     * 获取标签
+     * 获取标签（post请求，body=json格式）
      * @param subscriber
      */
     public static void getTag(DisposableObserver<ResponseBody> subscriber) {
@@ -30,6 +30,11 @@ public class HsjSubscribe {
         BaseSubscribe.toSubscribe(observable, subscriber);
     }
 
+    /**
+     * （post请求，body=Form格式）
+     * @param mobile
+     * @param subscriber
+     */
     public static void getCodeSms(String mobile, DisposableObserver<ResponseBody> subscriber) {
         Map<String,String> map = new HashMap<>();
         map.put("mobile", mobile);
@@ -38,7 +43,7 @@ public class HsjSubscribe {
     }
 
     /**
-     * 获取标签
+     * Get请求方式
      * @param subscriber
      */
     public static void getToken(DisposableObserver<ResponseBody> subscriber) {
@@ -47,7 +52,7 @@ public class HsjSubscribe {
     }
 
     /**
-     * 上传头像接口
+     * 上传头像接口  （post请求方式，其他参数一并传输，body=Form形式）
      * type 1=image 2=audio
      */
     public static void uploadFileToGetUrl(int type, File file, DisposableObserver<ResponseBody> subscriber) {

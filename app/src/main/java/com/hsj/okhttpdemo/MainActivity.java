@@ -54,17 +54,17 @@ public class MainActivity extends AppCompatActivity {
         HsjSubscribe.getToken(new BaseCallback<Token>() {
             @Override
             public void onSuccess(Token result) {
-                HsjLogger.d("--ttsToken--onSuccess--");
+                HsjLogger.d("--getToken--onSuccess--");
             }
 
             @Override
             public void onFault(int code, String errorMsg) {
-                HsjLogger.d("--ttsToken--onFault--");
+                HsjLogger.d("--getToken--onFault--");
             }
 
             @Override
             public void netError() {
-                HsjLogger.d("--ttsToken--netError--");
+                HsjLogger.d("--getToken--netError--");
             }
         });
     }

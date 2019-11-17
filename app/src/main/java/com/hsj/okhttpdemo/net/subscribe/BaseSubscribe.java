@@ -73,19 +73,6 @@ public class BaseSubscribe {
         return builder.build(baseUrl).create(apiClass);
     }
 
-    /**
-     * 设置订阅 和 所在的线程环境
-     * @param o
-     * @param s
-     */
-    public static void toSubscribe(Observable<ResponseBody> o, DisposableObserver<ResponseBody> s) {
-        o.subscribeOn(Schedulers.io())
-                .unsubscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .retry(1)//请求失败重连次数
-                .subscribe(s);
-    }
-
     private static Map<String, String> getHeaderParams(String token, String userId) {
         String timestamp, signature;
 
@@ -104,5 +91,18 @@ public class BaseSubscribe {
         params.put("signature", signature);
 
         return params;
+    }
+
+    /**
+     * 设置订阅 和 所在的线程环境
+     * @param o
+     * @param s
+     */
+    public static void toSubscribe(Observable<ResponseBody> o, DisposableObserver<ResponseBody> s) {
+        o.subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .retry(1)//请求失败重连次数
+                .subscribe(s);
     }
 }
