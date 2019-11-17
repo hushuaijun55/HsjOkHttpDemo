@@ -1,0 +1,1 @@
+include ':app', ':hsjokhttp', ':hsjlogger', ':bean'
