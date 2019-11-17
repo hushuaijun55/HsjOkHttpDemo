@@ -7,7 +7,7 @@
 ## 1.导入hsjokhttp module。
 1. 注意module中gradle文件里，对okhttp等一系列第三方库的依赖不要丢。
 ```java
-	implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+implementation 'com.squareup.okhttp3:okhttp:4.2.2'
     implementation "io.reactivex.rxjava2:rxjava:2.2.0"
     implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
@@ -26,7 +26,7 @@
 ## 2.接入使用
 1. 在项目的app(主) module的gradle文件中依赖网络库及其他相关库。
 ```java
-	implementation "io.reactivex.rxjava2:rxjava:2.2.0"
+implementation "io.reactivex.rxjava2:rxjava:2.2.0"
     implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
     implementation 'com.squareup.okhttp3:okhttp:4.2.2'
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
@@ -288,7 +288,7 @@ public abstract class BaseCallback<T> extends NetCallback<T> {
 
 7. 记得在主工程AndroidManifest.xml文件中添加网络请求等权限。
 ```java
-	<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
