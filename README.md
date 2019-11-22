@@ -1,7 +1,7 @@
-[同步blog链接：基于okhttp3+retrofit2封装的网络库](https://blog.csdn.net/hshuaijun55/article/details/103109630)
+[同步blog链接：基于okhttp3+retrofit2封装的网络库(含websocket封装)](https://blog.csdn.net/hshuaijun55/article/details/103109630)
 
 # 背景
-封装的网络库基于**okhttp3+retrofit2+rxandroid+rxjava**。目的是单独封装处理网络请求，可供项目中多个module使用，所以Demo中代码模块拆的比较细。包含**hsjokhttp(网络库封装)、hsjlogger(日志打印)、bean(对象模块)**，只需要关注**hsjokhttp(网络库封装)** 模块，其余两模块都比较简单。
+封装的网络库基于**okhttp3+retrofit2+rxandroid+rxjava**。目的是单独封装处理网络请求，可供项目中多个module使用，所以Demo中代码模块拆的比较细。包含**hsjokhttp(网络库封装)、hsjlogger(日志打印)、bean(对象模块)**，只需要关注**hsjokhttp(网络库封装)** 模块，其余两模块都比较简单。库中包含websocket封装部分，详细信息请点击跳转至 [基于OKHttp的websocket封装使用](https://blog.csdn.net/hshuaijun55/article/details/103206152) 。
 
 # 接入方式
 ## 1.导入hsjokhttp module。
